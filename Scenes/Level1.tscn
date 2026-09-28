@@ -58,5 +58,5 @@ color = Color(0.91764706, 0.67058825, 1, 1)
 polygon = PackedVector2Array(-80, -10, 80, -10, 80, 10, -80, 10)
 uv = PackedVector2Array(-282, -50, -187, 15, -200, -61, -249, -71)
 
-[node name="Pickup" parent="." unique_id=704783670 instance=ExtResource("2_q12u6")]
-position = Vector2(263, 413)
+[node name="Coin1" parent="." unique_id=704783670 instance=ExtResource("2_q12u6")]
+position = Vector2(150, 600)
