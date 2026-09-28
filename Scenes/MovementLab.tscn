@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://o20lwmknpso6"]
+
+[ext_resource type="Script" uid="uid://dv7ufan5qddmn" path="res://Scripts/Mover.cs" id="1_130km"]
+
+[node name="MovementLab" type="Node2D" unique_id=30576238]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1942634951]
+
+[node name="Mover" type="Node2D" parent="Node2D" unique_id=1306303740]
+position = Vector2(80, 360)
+script = ExtResource("1_130km")
+
+[node name="Visual" type="Polygon2D" parent="Node2D/Mover" unique_id=1963562616]
+polygon = PackedVector2Array(-16, -24, 16, -24, 16, 24, -16, 24)
+uv = PackedVector2Array(-389, -56, -305, 34, -241, -22, -339, -83)
