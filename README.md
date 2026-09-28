@@ -22,3 +22,12 @@ def _Ready():
         print("Viss kārtībā");
 ```
 Pythonā nav {}, un ir :, nav int vai void, nav GD.
+
+
+```
+Punkti: 1; atslēga: False
+Punkti: 2; atslēga: False
+Punkti: 2; atslēga: True
+Punkti: 7; atslēga: True
+Atslēga ir — finišu varēs atvērt.
+```

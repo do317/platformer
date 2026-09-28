@@ -41,4 +41,15 @@ public partial class Player : CharacterBody2D
 
         GD.Print($"Punkti: {Score}; atslēga: {HasKey}");
     }
+	// public override void _Ready()
+	// {
+	// 	PickupType[] items = { PickupType.Coin, PickupType.Coin, PickupType.Key,PickupType.Gem };
+	// 	foreach (PickupType item in items)
+	// 		OnPickup(item);
+
+	// 	if (HasKey)
+	// 		GD.Print("Atslēga ir — finišu varēs atvērt.");
+	// 	else
+	// 		GD.Print("Vēl jāatrod atslēga.");
+	// }
 }
