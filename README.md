@@ -10,3 +10,15 @@ PhysicsProcess ir priekš fizikas.
 
 √2 = ~1.41
 Velocity Player.cs papildus nereizina ar delta, jo tas ir rezināts ar delta iekša godot fizikas kodā.  
+
+```py
+def _Ready():
+    health = 100
+    if (health <= 0):
+        print("Spēle beigusies")
+    else if (health < 30):
+        print("Uzmanību!")
+    else:
+        print("Viss kārtībā");
+```
+Pythonā nav {}, un ir :, nav int vai void, nav GD.
