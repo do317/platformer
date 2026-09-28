@@ -59,4 +59,23 @@ polygon = PackedVector2Array(-80, -10, 80, -10, 80, 10, -80, 10)
 uv = PackedVector2Array(-282, -50, -187, 15, -200, -61, -249, -71)
 
 [node name="Coin1" parent="." unique_id=704783670 instance=ExtResource("2_q12u6")]
-position = Vector2(150, 600)
+position = Vector2(144, 590)
+
+[node name="Coin2" parent="." unique_id=900284713 instance=ExtResource("2_q12u6")]
+position = Vector2(280, 525)
+
+[node name="Coin3" parent="." unique_id=347432124 instance=ExtResource("2_q12u6")]
+position = Vector2(600, 600)
+
+[node name="Coin4" parent="." unique_id=199037344 instance=ExtResource("2_q12u6")]
+position = Vector2(1050, 600)
+
+[node name="Gem" parent="." unique_id=1396673838 instance=ExtResource("2_q12u6")]
+modulate = Color(1, 0.5647059, 1, 1)
+position = Vector2(480, 435)
+Type = 1
+
+[node name="Key" parent="." unique_id=1708114691 instance=ExtResource("2_q12u6")]
+modulate = Color(1.347661e-06, 0.65565467, 0.759437, 1)
+position = Vector2(680, 345)
+Type = 2
