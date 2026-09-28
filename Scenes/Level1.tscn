@@ -2,7 +2,57 @@
 
 [ext_resource type="PackedScene" uid="uid://pbmoqjvodepq" path="res://Scenes/Player.tscn" id="1_2llne"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2llne"]
+size = Vector2(1280, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vs21y"]
+size = Vector2(160, 20)
+
 [node name="Level1" type="Node2D" unique_id=1626682595]
 
 [node name="Player" parent="." unique_id=645678583 instance=ExtResource("1_2llne")]
 position = Vector2(80, 570)
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=439304196]
+position = Vector2(640, 660)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=917303526]
+shape = SubResource("RectangleShape2D_2llne")
+
+[node name="Polygon2D" type="Polygon2D" parent="Ground" unique_id=1939694484]
+color = Color(0.91764706, 0.67058825, 1, 1)
+polygon = PackedVector2Array(-640, -20, 640, -20, 640, 20, -640, 20)
+uv = PackedVector2Array(-282, -50, -187, 15, -200, -61, -249, -71)
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=685881089]
+position = Vector2(280, 560)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1497313604]
+shape = SubResource("RectangleShape2D_vs21y")
+
+[node name="Polygon2D" type="Polygon2D" parent="Platform1" unique_id=721208217]
+color = Color(0.91764706, 0.67058825, 1, 1)
+polygon = PackedVector2Array(-80, -10, 80, -10, 80, 10, -80, 10)
+uv = PackedVector2Array(-282, -50, -187, 15, -200, -61, -249, -71)
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=989897203]
+position = Vector2(480, 470)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=715315336]
+shape = SubResource("RectangleShape2D_vs21y")
+
+[node name="Polygon2D" type="Polygon2D" parent="Platform2" unique_id=1979100389]
+color = Color(0.91764706, 0.67058825, 1, 1)
+polygon = PackedVector2Array(-80, -10, 80, -10, 80, 10, -80, 10)
+uv = PackedVector2Array(-282, -50, -187, 15, -200, -61, -249, -71)
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=1651763444]
+position = Vector2(680, 380)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=195264964]
+shape = SubResource("RectangleShape2D_vs21y")
+
+[node name="Polygon2D" type="Polygon2D" parent="Platform3" unique_id=653510382]
+color = Color(0.91764706, 0.67058825, 1, 1)
+polygon = PackedVector2Array(-80, -10, 80, -10, 80, 10, -80, 10)
+uv = PackedVector2Array(-282, -50, -187, 15, -200, -61, -249, -71)
