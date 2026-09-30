@@ -31,3 +31,8 @@ Punkti: 2; atslēga: True
 Punkti: 7; atslēga: True
 Atslēga ir — finišu varēs atvērt.
 ```
+
+
+vārds: Iaj
+kas ir varonis: Zaķis
+ko viņš vēlas un kāpēc tas ir svarīgi: Burkānus, jo negrib nomirst.

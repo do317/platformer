@@ -14,10 +14,23 @@ size = Vector2(160, 20)
 size = Vector2(48, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q12u6"]
-size = Vector2(80, 30)
+size = Vector2(63, 19)
 
 [node name="Level1" type="Node2D" unique_id=1626682595]
 script = ExtResource("1_joc8x")
+GameTitle = "Iaj"
+Mission = "Atrodi zaļo atslēgu un sasniedz burkānus. Izvairies no bedres!"
+WinText = "Burkānus var atrast mājā!"
+LockedText = "Vispirms atrodi zaļo atslēgu augšējā platformā."
+
+[node name="Bg" type="Polygon2D" parent="." unique_id=1950215731]
+color = Color(0.19793725, 0.19793725, 0.19793719, 1)
+polygon = PackedVector2Array(159.10498, 520.32184, 193.62769, 361.51727, 297.19592, 596.27185, 500.88013, 686.031, 585.36707, 433.66028, 676, 579, 866, 724, 1011, 594, 1059, 363, 1160, 592, 1344, 654, 1408, 243, 1244, -83, 1127, 31, 1078, 119, 1052, 23, 925, -52, 790, 54, 754, 181, 674, 59, 515, -24, 362, 70, 284, 217, 183, 88, -66, 36, -245, 350, -105, 726, 38.27539, 696.3878)
+uv = PackedVector2Array(86, 694, 213, 363, 370, 753, 540, 602, 574, 418, 676, 579, 866, 724, 1011, 594, 1059, 363, 1160, 592, 1344, 654, 1408, 243, 1244, -83, 1127, 31, 1078, 119, 1052, 23, 925, -52, 790, 54, 754, 181, 674, 59, 515, -24, 362, 70, 284, 217, 183, 88, -66, 36, -245, 350, -105, 726, -10.0563965, 696.3878)
+
+[node name="Bg2" type="Polygon2D" parent="." unique_id=943236626]
+color = Color(0.14406255, 0.14406255, 0.14406249, 1)
+polygon = PackedVector2Array(-69, 376, 19, 164, 106, 259, 173, 168, 293, 317, 400, 209, 527, 253, 607, 132, 744, 242, 868, 123, 933, 199, 978, 119, 1118, 183, 1213, 117, 1297, 343, 1309, 487, 1209, 429, 1145, 368, 1104, 421, 1079, 411, 1059, 365, 1046, 429, 976, 405, 888, 487, 759, 429, 673, 474, 585, 433, 477, 480, 377, 413, 331, 448, 214, 407, 193, 362, 106, 450, 17, 497)
 
 [node name="Player" parent="." unique_id=645678583 instance=ExtResource("1_2llne")]
 position = Vector2(80, 570)
@@ -29,8 +42,8 @@ position = Vector2(640, 660)
 shape = SubResource("RectangleShape2D_2llne")
 
 [node name="Polygon2D" type="Polygon2D" parent="Ground" unique_id=1939694484]
-color = Color(0.91764706, 0.67058825, 1, 1)
-polygon = PackedVector2Array(-640, -20, 640, -20, 640, 20, -640, 20)
+color = Color(0.6609747, 0.8577487, 0.30751473, 1)
+polygon = PackedVector2Array(-724, -20, 709, -20, 673, 112, 171, 220, -553, 153)
 uv = PackedVector2Array(-282, -50, -187, 15, -200, -61, -249, -71)
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=685881089]
@@ -100,7 +113,7 @@ position = Vector2(1065, 235)
 Type = 2
 
 [node name="Finish" type="Area2D" parent="." unique_id=1562052101]
-position = Vector2(850, 590)
+position = Vector2(1237, 590)
 collision_layer = 4
 collision_mask = 2
 
@@ -108,21 +121,33 @@ collision_mask = 2
 shape = SubResource("RectangleShape2D_fco5r")
 
 [node name="Polygon2D" type="Polygon2D" parent="Finish" unique_id=1495777337]
-color = Color(0, 0.8586993, 0.35784435, 1)
+color = Color(0.6262222, 0.33756274, 0, 1)
 polygon = PackedVector2Array(-24, -50, 24, -50, 24, 50, -24, 50)
 uv = PackedVector2Array(-166, -64, -21, -66, -17, 15, -154, 13)
 
 [node name="Hazard" type="Area2D" parent="." unique_id=392141828]
-position = Vector2(440, 625)
+position = Vector2(852, 625)
+scale = Vector2(2, 1)
 collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard" unique_id=1538588862]
+position = Vector2(0.5, 23.5)
 shape = SubResource("RectangleShape2D_q12u6")
 
 [node name="Polygon2D" type="Polygon2D" parent="Hazard" unique_id=635060863]
-color = Color(1, 0.2643935, 0.36989257, 1)
-polygon = PackedVector2Array(-40, -15, 40, -15, 40, 15, -40, 15)
+color = Color(0.86417085, 0.46639752, 1.1551381e-06, 1)
+polygon = PackedVector2Array(-52, 15, 46, 15, 24, 45, 5, 39, -24, 39, -34, 34, -41, 22)
+uv = PackedVector2Array(-166, -64, -21, -66, -17, 15, -154, 13)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Hazard" unique_id=483545758]
+color = Color(0.364212, 0.1758458, 9.62615e-08, 1)
+polygon = PackedVector2Array(-39, 15, 37, 15, 26, 34, 10, 37, -11, 35, -27, 29, -32, 21)
+uv = PackedVector2Array(-166, -64, -21, -66, -17, 15, -154, 13)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Hazard" unique_id=1155877591]
+color = Color(0.104334034, 0, 0.010925568, 1)
+polygon = PackedVector2Array(-31, 15, 32, 15, 29, 21, 16, 27, 7, 32, -11, 32, -19, 25, -30, 20)
 uv = PackedVector2Array(-166, -64, -21, -66, -17, 15, -154, 13)
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1194783547]
