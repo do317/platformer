@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cmu8218jhh6km" path="res://Scripts/Player.cs" id="1_rpqav"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fco5r"]
-size = Vector2(32, 48)
+size = Vector2(25, 45)
 
 [node name="Player" type="CharacterBody2D" unique_id=645678583]
 collision_layer = 2
@@ -14,4 +14,5 @@ polygon = PackedVector2Array(10.919395, 16.306936, 8.282608, 25.696194, 0.884586
 uv = PackedVector2Array(11.415817, 11.185513, 7.8249207, 20.043034, 2.0795135, 13.100655, -5.5810547, 20.521816, -4.8628693, 12.382477, -3.905304, 4.9613113, -12.284042, 0.41285706, -11.565857, -9.881018, -7.2215576, -13.233154, -5.5810547, -24.24456, -2.4689484, -28.793016, -1.7507629, -12.993118, 1.3613281, -16.823397, 2.3188934, -31.186941, 5.1916046, -25.20213, 7.1067505, -13.711296, 12.958633, -6.3085823, 17.87941, 14.7764015, 17.904755, -5.715046, 21.663803, 9.519012, 19.091827, 17.234966)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=928554944]
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_fco5r")

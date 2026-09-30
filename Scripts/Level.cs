@@ -23,6 +23,7 @@ public partial class Level : Node2D
         message.Text = Mission;
         GetNode<Area2D>("Finish").BodyEntered += OnFinishEntered;
         GetNode<Area2D>("Hazard").BodyEntered += OnHazardEntered;
+        GetNode<Area2D>("Hazard2").BodyEntered += OnHazardEntered;
         UpdateHud();
     }
 

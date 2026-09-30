@@ -5,7 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://wfjvoibvumck" path="res://Scenes/Pickup.tscn" id="2_q12u6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2llne"]
-size = Vector2(1280, 40)
+size = Vector2(775, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jghel"]
+size = Vector2(353, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vs21y"]
 size = Vector2(160, 20)
@@ -14,7 +17,10 @@ size = Vector2(160, 20)
 size = Vector2(48, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q12u6"]
-size = Vector2(63, 19)
+size = Vector2(90.5, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_joc8x"]
+size = Vector2(58, 470)
 
 [node name="Level1" type="Node2D" unique_id=1626682595]
 script = ExtResource("1_joc8x")
@@ -32,14 +38,16 @@ uv = PackedVector2Array(86, 694, 213, 363, 370, 753, 540, 602, 574, 418, 676, 57
 color = Color(0.14406255, 0.14406255, 0.14406249, 1)
 polygon = PackedVector2Array(-69, 376, 19, 164, 106, 259, 173, 168, 293, 317, 400, 209, 527, 253, 607, 132, 744, 242, 868, 123, 933, 199, 978, 119, 1118, 183, 1213, 117, 1297, 343, 1309, 487, 1209, 429, 1145, 368, 1104, 421, 1079, 411, 1059, 365, 1046, 429, 976, 405, 888, 487, 759, 429, 673, 474, 585, 433, 477, 480, 377, 413, 331, 448, 214, 407, 193, 362, 106, 450, 17, 497)
 
-[node name="Player" parent="." unique_id=645678583 instance=ExtResource("1_2llne")]
-position = Vector2(80, 570)
-
 [node name="Ground" type="StaticBody2D" parent="." unique_id=439304196]
 position = Vector2(640, 660)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=917303526]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground" unique_id=285365663]
+position = Vector2(-252.5, 0)
 shape = SubResource("RectangleShape2D_2llne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=917303526]
+position = Vector2(463.5, 0)
+shape = SubResource("RectangleShape2D_jghel")
 
 [node name="Polygon2D" type="Polygon2D" parent="Ground" unique_id=1939694484]
 color = Color(0.6609747, 0.8577487, 0.30751473, 1)
@@ -132,7 +140,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard" unique_id=1538588862]
-position = Vector2(0.5, 23.5)
+position = Vector2(-4.25, 49.5)
 shape = SubResource("RectangleShape2D_q12u6")
 
 [node name="Polygon2D" type="Polygon2D" parent="Hazard" unique_id=635060863]
@@ -149,6 +157,23 @@ uv = PackedVector2Array(-166, -64, -21, -66, -17, 15, -154, 13)
 color = Color(0.104334034, 0, 0.010925568, 1)
 polygon = PackedVector2Array(-31, 15, 32, 15, 29, 21, 16, 27, 7, 32, -11, 32, -19, 25, -30, 20)
 uv = PackedVector2Array(-166, -64, -21, -66, -17, 15, -154, 13)
+
+[node name="Hazard2" type="Area2D" parent="." unique_id=1401730960]
+position = Vector2(2556, 1250)
+scale = Vector2(4, 1)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hazard2" unique_id=665937087]
+position = Vector2(-674, -683)
+shape = SubResource("RectangleShape2D_joc8x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazard2" unique_id=347237990]
+position = Vector2(-286.75, -614)
+shape = SubResource("RectangleShape2D_joc8x")
+
+[node name="Player" parent="." unique_id=645678583 instance=ExtResource("1_2llne")]
+position = Vector2(80, 570)
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1194783547]
 
