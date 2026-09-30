@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ch7lxc3ysrljr"]
 
 [ext_resource type="PackedScene" uid="uid://pbmoqjvodepq" path="res://Scenes/Player.tscn" id="1_2llne"]
+[ext_resource type="Script" uid="uid://c35wtfflxv3ut" path="res://Scripts/Level.cs" id="1_joc8x"]
 [ext_resource type="PackedScene" uid="uid://wfjvoibvumck" path="res://Scenes/Pickup.tscn" id="2_q12u6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2llne"]
@@ -16,6 +17,7 @@ size = Vector2(48, 100)
 size = Vector2(80, 30)
 
 [node name="Level1" type="Node2D" unique_id=1626682595]
+script = ExtResource("1_joc8x")
 
 [node name="Player" parent="." unique_id=645678583 instance=ExtResource("1_2llne")]
 position = Vector2(80, 570)
@@ -124,3 +126,27 @@ polygon = PackedVector2Array(-40, -15, 40, -15, 40, 15, -40, 15)
 uv = PackedVector2Array(-166, -64, -21, -66, -17, 15, -154, 13)
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1194783547]
+
+[node name="Instructions" type="Label" parent="HUD" unique_id=2116039504]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 1260.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+
+[node name="Status" type="Label" parent="HUD" unique_id=368381803]
+offset_left = 20.0
+offset_top = 48.0
+offset_right = 1260.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+
+[node name="Message" type="Label" parent="HUD" unique_id=543768590]
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 1260.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
